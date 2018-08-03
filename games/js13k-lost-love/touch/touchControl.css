@@ -1,0 +1,102 @@
+/* RESET */
+html, body, div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* END */
+body{
+	font-size:62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: grey;
+	color: white;
+}
+
+.dot{
+	position:absolute;
+	width:20px;
+	height:20px;
+	background:#f60;
+	border-radius: 10px;
+	margin:-10px;
+}
+
+#control{
+	position:absolute;
+	width:60px;
+	height:60px;
+	left: 35%;
+	top: 50%;
+}
+#control div{
+	margin:-50%;
+	position:absolute;
+}
+#control.off{
+	left: -1000px !important;
+}
+#control #wheel{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+	border: 13px solid rgba(255, 255, 255, .2);
+}
+#control #we,
+#control #ns{
+	font-size: 3em;
+	line-height: 0;
+}
+#control #we{
+	width:100%;
+	top: 45%;
+}
+#control #we::before{
+    content: "\21e6";
+	position:absolute;
+	left: 0;
+}
+#control #we::after{
+    content: "\21e8";
+	position:absolute;
+    right: 0;
+}
+#control #ns{
+	height: 100%;
+	left: 35%;
+}
+#control #ns::before{
+    content: "\21e7";
+	position:absolute;
+	top: 10px;
+}
+#control #ns::after{
+	position:absolute;
+    content: "\21e9";
+	bottom: 10px;
+}
+
+#control #we.left::before{
+    left: -6px;
+}
+#control #we.right::after{
+    right: -6px;
+}
+#control #ns.up::before{
+    top: 6px;
+}
+#control #ns.down::after{
+    bottom: 6px;
+}
+
+#control .dot{
+	position:absolute;
+	background:grey;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+	margin:-25%;
+}

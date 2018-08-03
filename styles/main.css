@@ -1,0 +1,132 @@
+@font-face {
+    font-family: arcade;
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+
+html,body{
+    color:#fff;
+    font-family: 'arcade';
+    font-size:14px;
+    text-align: center;
+    height:100%;
+    position: relative;
+    width:100%;
+
+    background: #141616;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #232526, #141616);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #232526, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+h1{
+    margin-bottom:10px; 
+}
+h2{
+    margin-bottom:20px;
+}
+
+ul, li{
+    position: relative;
+}
+
+li{
+    background-color:#202222;
+    padding: 10px;
+    position: relative;
+    max-width: 400px;
+    margin: 10px auto;
+    text-align: left
+}
+
+li a{
+    position: relative; 
+}
+
+li.selected{
+    color:rgb(238, 127, 37);
+}
+
+.center{
+    /*height:50%;*/
+    left:50%;
+    position:relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*width:50%;*/
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #fff;
+}
+
+li a.selected{
+    color:rgb(238, 127, 37);
+}
+
+.selected-game-icon{
+    background-image: url('../images/space-invaders-icon.png');
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    display: inline-block;
+    height: 14px;
+    margin-right: 20px;
+    left: -40px;
+}
+
+.app{
+    height:100%;
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.game-menu{
+    height:100%;
+    position: relative;
+    width:100%;
+}
+
+.game-screen{
+    background-color:rgb(238, 127, 37);
+    height:100%;
+    position: absolute;
+    width:100%;
+    top:0;
+    left:100%;
+    transition: left 1s;
+}
+
+.game-screen.active{
+    left:0%;
+}
+
+.game-screen iframe{
+    height:100%;
+    position: relative;
+    width:100%;
+    animation-fill-mode: initial;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.game-screen.fade iframe{
+   /* animation: fade-in 1s;*/
+    opacity: 1;
+}
+
+@-webkit-keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
